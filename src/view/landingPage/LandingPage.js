@@ -1,6 +1,7 @@
 import React from 'react'
 import ShrinkingNavbar from '../../component/navbar/ShrinkingNavbar'
 import SearchInput from '../../component/search/SearchInput'
+import Content from '../../component/slider/Content'
 
 export default function LandingPage() {
   return (
@@ -10,6 +11,7 @@ export default function LandingPage() {
       </div>
         <ShrinkingNavbar/>
         <SearchInput/>
+        <Content/>
     </div>
   )
 }
