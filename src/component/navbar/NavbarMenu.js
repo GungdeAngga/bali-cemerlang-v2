@@ -12,7 +12,7 @@ export default function NavbarMenu() {
   return (
 
     <div className='flex md:items-center'>
-      <div class='w-6 pt-1 ml-8 md:w-12 md:pt-2 md:ml-7 lg:w-16 lg:ml-14 lg::mt-6'>
+      <div class='w-6 pt-1 ml-8 md:w-12 md:pt-2 md:ml-7 lg:w-16 lg:ml-14 lg:mt-2'>
         <Link to='/'>
           <img src='/assets/LogoBaliCemerlang.svg' alt='Logo'/>
         </Link>
