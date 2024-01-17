@@ -36,7 +36,7 @@ export default function NavbarMenu() {
                 </a>
               </li>
               <li>
-                <a href="/" className="font-poppins hover:text-gray-300 ">
+                <a href="/PackagesPage" className="font-poppins hover:text-gray-300 ">
                   Packages
                 </a>
               </li>
@@ -76,7 +76,7 @@ export default function NavbarMenu() {
             </a>
           </li>
           <li>
-            <a href="/" className="font-poppins text-white hover:text-gray-300 pl-6">
+            <a href="/PackagesPage" className="font-poppins text-white hover:text-gray-300 pl-6">
               Packages
             </a>
           </li>
