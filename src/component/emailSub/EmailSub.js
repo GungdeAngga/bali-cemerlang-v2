@@ -24,7 +24,7 @@ export default function EmailSub() {
           onClick={handleSubscribe}
           className="bg-VividRed hover:bg-VividRed2 text-white font-bold p-2 lg:py-2 lg:px-4 rounded-xl focus:outline-none focus:shadow-outline -ml-7 text-xs md:text-sm lg:text-base h-8 md:h-10"
            >
-            Subscripe
+            Subscribe
            </button>
         </div>
         <div class='text-center pt-1 md:pt-2 text-xs md:text-sm lg:text-base'>
