@@ -160,7 +160,7 @@ export default function Content() {
         <p className='font-bold'>Special Offer</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper nec sed ligula ac tellus senectus ut. Ac.</p>
       </div>
-      <div className='w-3/4 m-auto mt-6 lg:w-full lg:mt-9'>
+      <div className='mt-6 lg:w-full lg:mt-9'>
       <Slider {...settings}>
         {data.map ((data) => (
           <div className='bg-white h-[230px] md:h-[330px] lg:h-[460px] text-black rounded-xl'>
