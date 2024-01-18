@@ -12,7 +12,7 @@ export default function NavbarMenu() {
   return (
 
     <div className='flex md:items-center'>
-      <div class='w-6 pt-1 ml-8 md:w-12 md:pt-2 md:ml-7 lg:w-16 lg:ml-14 lg:mt-2'>
+      <div class='w-8 pt-2 ml-8 md:w-12 md:pt-2 md:ml-7 lg:w-16 lg:ml-14 lg:mt-2'>
         <Link to='/'>
           <img src='/assets/LogoBaliCemerlang.svg' alt='Logo'/>
         </Link>
@@ -21,7 +21,7 @@ export default function NavbarMenu() {
       <div className='md:absolute md:flex md:right-0 md:pt-2 md:mr-7 lg:mr-14 lg::mt-6'>
         { /* Conditionally render the menu based on screen size */ }
         { window.innerWidth < 768 ? (
-          <div className='group absolute right-0 pt-2 text-xs w-[60px]'>
+          <div className='group absolute right-0 mt-4 text-xs w-[60px]'>
             <button onClick={handleToggleDropdown} className='font-poppins text-white md:text-gray-300 focus:outline-none'>
               Menu
             </button>

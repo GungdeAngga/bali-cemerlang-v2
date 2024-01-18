@@ -37,7 +37,7 @@ export default function PackagesContent() {
       
             </div>
         
-        <div class='pt-16 pb-36'>
+        <div class='pt-16 pb-6'>
 
                 <PackagesDetails/>
 
