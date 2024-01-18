@@ -91,7 +91,7 @@ export default function NavbarMenu() {
             </a>
           </li>
           <li>
-            <a href="/" className="font-poppins text-white hover:text-gray-300 pl-6">
+            <a href="/AboutUsPage" className="font-poppins text-white hover:text-gray-300 pl-6">
               About Us
             </a>
           </li>
