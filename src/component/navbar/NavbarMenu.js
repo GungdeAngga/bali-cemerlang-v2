@@ -41,7 +41,7 @@ export default function NavbarMenu() {
                 </a>
               </li>
               <li>
-                <a href="/" className="font-poppins hover:text-gray-300 ">
+                <a href="/NewsPage" className="font-poppins hover:text-gray-300 ">
                   News
                 </a>
               </li>
@@ -81,7 +81,7 @@ export default function NavbarMenu() {
             </a>
           </li>
           <li>
-            <a href="/" className="font-poppins text-white hover:text-gray-300 pl-6">
+            <a href="/NewsPage" className="font-poppins text-white hover:text-gray-300 pl-6">
               News
             </a>
           </li>

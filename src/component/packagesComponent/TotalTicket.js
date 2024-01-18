@@ -96,7 +96,7 @@ export default function TotalTicket() {
     ]
   return (
 
-        <div class='w-10/12 md:w-11/12 m-auto'>
+    <div class='w-10/12 md:w-11/12 m-auto'>
       
       <div className='md:mt-3 lg:mt-9'>
       <Slider {...settings}>
@@ -130,7 +130,7 @@ export default function TotalTicket() {
       </Slider>
       </div>
       
-      </div>
+    </div>
 
   )
 }
