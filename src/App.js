@@ -5,6 +5,7 @@ import PackagesPage from "./view/packages/PackagesPage";
 import PaymentPage from "./view/payment/PaymentPage";
 import SpecialOfferPage from "./view/offer/SpecialOfferPage";
 import AboutUsPage from "./view/aboutUs/AboutUsPage";
+import GaleryPage from "./view/galery/GaleryPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/PaymentPage" element={<PaymentPage/>}/>
         <Route path="/SpecialOfferPage" element={<SpecialOfferPage/>}/>
         <Route path="/AboutUsPage" element={<AboutUsPage/>}/>
+        <Route path="/GaleryPage" element={<GaleryPage/>}/>
       </Routes>
     </BrowserRouter>
   );
