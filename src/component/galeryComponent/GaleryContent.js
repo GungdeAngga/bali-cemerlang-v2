@@ -157,7 +157,7 @@ export default function GaleryContent() {
         </div>
         
       </div>
-      <div className='mt-6 lg:mt-20'>
+      <div className='lg:w-10/12 m-auto mt-6 lg:mt-20'>
       <Slider {...settings}>
         {data.map ((data) => (
           <div className='bg-white h-[110px] md:h-[140px] lg:h-[170px] text-black rounded-xl'>
