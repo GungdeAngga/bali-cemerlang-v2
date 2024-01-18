@@ -197,7 +197,7 @@ export default function CustomerFeedback() {
 
                 <div className='flex flex-col justify-center gap-1 p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-2xl'>
                 <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
-                <p className='text-xs md:text-sm lg:text-base text-justify'>{data.description}</p>
+                <p className='text-xs md:text-sm lg:text-base text-justify'>{(data.id) ? data.description : `${data.description.slice(0, 70)}...`}</p>
                 </div>
             </div>
             ))}

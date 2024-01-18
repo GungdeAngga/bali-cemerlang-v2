@@ -109,7 +109,7 @@ export default function Promo() {
       <div className='mt-6 lg:mt-9'>
       <Slider {...settings}>
         {data.map ((data) => (
-          <div className='bg-white h-[160px] md:h-[250px] lg:h-[370px] text-black rounded-xl'>
+          <div className='bg-white h-[170px] md:h-[250px] lg:h-[370px] text-black rounded-xl'>
             <div className='h-20 md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl border-x-2 border-t-2 border-gray-400'>
               <img src={data.image} alt='' className='h-[70px] w-[70px] md:h-32 md:w-32 lg:h-full lg:w-full rounded-full lg:rounded-t-lg lg:rounded-b-none'/>
             </div>
