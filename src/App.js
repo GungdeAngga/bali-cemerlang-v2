@@ -6,6 +6,7 @@ import PaymentPage from "./view/payment/PaymentPage";
 import SpecialOfferPage from "./view/offer/SpecialOfferPage";
 import AboutUsPage from "./view/aboutUs/AboutUsPage";
 import GaleryPage from "./view/galery/GaleryPage";
+import NewsPage from "./view/news/NewsPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/SpecialOfferPage" element={<SpecialOfferPage/>}/>
         <Route path="/AboutUsPage" element={<AboutUsPage/>}/>
         <Route path="/GaleryPage" element={<GaleryPage/>}/>
+        <Route path="/NewsPage" element={<NewsPage/>}/>
       </Routes>
     </BrowserRouter>
   );

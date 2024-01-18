@@ -196,9 +196,6 @@ export default function SpecialOfferDetalis() {
         ))}
       </Slider>
       </div>
-      <div className='flex justify-center mt-3 md:mt-6'>
-        
-      </div>
     </div>
   )
 }
