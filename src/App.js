@@ -4,6 +4,7 @@ import LandingPage from "./view/landingPage/LandingPage";
 import PackagesPage from "./view/packages/PackagesPage";
 import PaymentPage from "./view/payment/PaymentPage";
 import SpecialOfferPage from "./view/offer/SpecialOfferPage";
+import AboutUsPage from "./view/aboutUs/AboutUsPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/PackagesPage" element={<PackagesPage/>}/>
         <Route path="/PaymentPage" element={<PaymentPage/>}/>
         <Route path="/SpecialOfferPage" element={<SpecialOfferPage/>}/>
+        <Route path="/AboutUsPage" element={<AboutUsPage/>}/>
       </Routes>
     </BrowserRouter>
   );
