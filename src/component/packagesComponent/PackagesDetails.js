@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -71,6 +72,7 @@ export default function PackagesDetails() {
   };
   const data = [
     {
+        id: 1,
         title: 'Silver Package 1',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -79,6 +81,7 @@ export default function PackagesDetails() {
         price: '200.000,00',
     },
     {
+        id: 2,
         title: 'Gold Package 1',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -87,6 +90,7 @@ export default function PackagesDetails() {
         price: '350.000,00',
     },
     {
+        id: 3,
         title: 'Platinum Package 1',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -95,6 +99,7 @@ export default function PackagesDetails() {
         price: '500.000,00',
     },
     {
+        id: 4,
         title: 'Silver Package 2',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -103,6 +108,7 @@ export default function PackagesDetails() {
         price: '200.000,00',
     },
     {
+        id: 5,
         title: 'Gold Package 2',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -111,6 +117,7 @@ export default function PackagesDetails() {
         price: '350.000,00',
     },
     {
+        id: 6,
         title: 'Platinum Package 2',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -119,6 +126,7 @@ export default function PackagesDetails() {
         price: '500.000,00',
     },
     {
+        id: 7,
         title: 'Silver Package 3',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -127,6 +135,7 @@ export default function PackagesDetails() {
         price: '200.000,00',
     },
     {
+        id: 8,
         title: 'Gold Package 3',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -135,6 +144,7 @@ export default function PackagesDetails() {
         price: '350.000,00',
     },
     {
+        id: 9,
         title: 'Platinum Package 3',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -143,6 +153,7 @@ export default function PackagesDetails() {
         price: '500.000,00',
     },
     {
+        id: 10,
         title: 'Silver Package 4',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -151,6 +162,7 @@ export default function PackagesDetails() {
         price: '200.000,00',
     },
     {
+        id: 11,
         title: 'Gold Package 4',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -159,6 +171,7 @@ export default function PackagesDetails() {
         price: '350.000,00',
     },    
     {
+        id: 12,
         title: 'Platinum Package 4',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -167,6 +180,7 @@ export default function PackagesDetails() {
         price: '500.000,00',
     },
     {
+        id: 13,
         title: 'Silver Package 5',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -175,6 +189,7 @@ export default function PackagesDetails() {
         price: '200.000,00',
     },
     {
+        id: 14,
         title: 'Gold Package 5',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -183,6 +198,7 @@ export default function PackagesDetails() {
         price: '350.000,00',
     },
     {
+        id: 15,
         title: 'Platinum Package 5',
         location: 'Nusa Lembongan',
         date: '13-Maret-2023',
@@ -218,9 +234,9 @@ export default function PackagesDetails() {
                 <div className='basis-5/12'>
                     <div className='flex flex-col items-center justify-center'>
                         <div className='font-bold text-lg md:text-xl lg:text-2xl mt-2 mb-2 lg:mt-4 lg:mb-4'>{data.time}</div>
-
+                        {/* <Link to={`./PaymentPage/${data.id}`}> */} <Link to='/PaymentPage'>
                         <button className='w-[80px] h-7 md:w-28 md:h-9 lg:h-10 bg-VividRed font-bold text-sm md:text-base lg:text-xl text-white rounded-xl'>Buy Tiket</button>
-
+                        {/* </Link> */}</Link>
                     </div>
                     <div className='ml-1 mt-3 lg:ml-2 lg:mt-4 text-xs md:text-sm lg:text-base'>Price : <span className='text-VividRed font-bold'>Rp</span><span className='text-VividRed font-bold'>{data.price}</span></div>
                 </div>
