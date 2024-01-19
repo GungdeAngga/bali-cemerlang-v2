@@ -2,28 +2,29 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
+    );
+  }
 
 export default function Promo() {
   const settings = {
@@ -54,7 +55,7 @@ export default function Promo() {
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1
           }
         }
@@ -109,12 +110,12 @@ export default function Promo() {
       <div className='mt-6 lg:mt-9'>
       <Slider {...settings}>
         {data.map ((data) => (
-          <div className='bg-white h-[170px] md:h-[250px] lg:h-[370px] text-black rounded-xl'>
-            <div className='h-20 md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl border-x-2 border-t-2 border-gray-400'>
+          <div className='bg-white h-[190px] md:h-[250px] lg:h-[370px] text-black rounded-xl'>
+            <div className='h-28 md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl border-x-2 border-t-2 border-gray-400'>
               <img src={data.image} alt='' className='h-[70px] w-[70px] md:h-32 md:w-32 lg:h-full lg:w-full rounded-full lg:rounded-t-lg lg:rounded-b-none'/>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-2xl'>
+            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-lg'>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 rounded-xl'>Read More</button>
             </div>

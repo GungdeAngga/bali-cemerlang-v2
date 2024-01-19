@@ -2,15 +2,16 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        
         onClick={onClick}
-      />
+      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
     );
   }
   
@@ -19,9 +20,9 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        
         onClick={onClick}
-      />
+      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
     );
   }
   const data = [
@@ -148,12 +149,12 @@ export default function GaleryContent() {
 
       
   return (
-    <div class='w-3/4 m-auto '>
+    <div class='w-3/4 m-auto lg:pb-20'>
 
       <div class='mt-20 lg:mt-44'>
         <div className='text-center lg:-mt-8'>
-            <p className='font-bold text-lg md:text-2xl lg:text-4xl'>Galery of Bali Cemerlang</p>
-            <p className='text-xs md:text-sm lg:text-base'>a collection of photos from Cemerlang Bali, a solution to your travel problems</p>
+            <p className='font-bold text-lg md:text-2xl lg:text-4xl '>Galery of Bali Cemerlang</p>
+            <p className='text-xs md:text-sm lg:text-base lg:mt-5'>a collection of photos from Cemerlang Bali, a solution to your travel problems</p>
         </div>
         
       </div>

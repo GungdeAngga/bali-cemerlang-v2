@@ -3,28 +3,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
+    );
+  }
 
 export default function Content() {
   const settings = {
@@ -168,7 +169,7 @@ export default function Content() {
               <img src={data.image} alt='' className='h-20 w-20 md:h-32 md:w-32 lg:h-52 lg:w-52 rounded-full'/>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-2 rounded-b-xl shadow-2xl'>
+            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-2 rounded-b-xl shadow-lg'>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <p className='text-xs md:text-sm lg:text-base text-justify px-3'>{(data.id) ? data.description : `${data.description.slice(0, 50)}...`}</p>
               <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 rounded-xl'>Read More</button>

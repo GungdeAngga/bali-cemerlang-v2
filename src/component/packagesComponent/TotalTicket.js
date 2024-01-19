@@ -2,15 +2,16 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        
         onClick={onClick}
-      />
+      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
     );
   }
   
@@ -19,9 +20,9 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        
         onClick={onClick}
-      />
+      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
     );
   }
 

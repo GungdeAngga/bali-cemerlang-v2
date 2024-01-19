@@ -185,7 +185,7 @@ export default function SpecialOfferDetalis() {
               <img src={data.image} alt='' className='h-20 w-20 md:h-32 md:w-32 lg:h-52 lg:w-52 rounded-full'/>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-2 rounded-b-xl shadow-2xl'>
+            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-2 rounded-b-xl shadow-lg'>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <p className='text-xs md:text-sm lg:text-base text-justify px-3'>{(data.id) ? data.description : `${data.description.slice(0, 50)}...`}</p>
 

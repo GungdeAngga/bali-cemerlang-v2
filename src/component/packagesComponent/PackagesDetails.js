@@ -3,28 +3,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
+    );
+  }
 
 export default function PackagesDetails() {
   const settings = {
@@ -215,7 +216,7 @@ export default function PackagesDetails() {
       <Slider {...settings}>
         {data.map ((data) => (
           <div className='bg-white h-[150px] md:h-[170px] lg:h-[200px] text-black rounded-xl'>
-            <div className='h-[125px] md:h-[145px] lg:h-[165px] flex flex-row border-2 border-gray-600 rounded-xl shadow-xl'>
+            <div className='h-[125px] md:h-[145px] lg:h-[165px] flex flex-row border-2 border-gray-600 rounded-xl shadow-lg'>
                 <div className='basis-7/12 ml-3 mt-2 border-r-4 border-dashed border-gray-600'>
                     <div className='font-bold text-sm md:text-lg lg:text-2xl'>{data.title}</div>
                     <div className='flex mt-1'>

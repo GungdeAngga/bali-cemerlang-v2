@@ -3,28 +3,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        
+        onClick={onClick}
+      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
+    );
+  }
 
 export default function CustomerFeedback() {
   const settings = {
@@ -195,7 +196,7 @@ export default function CustomerFeedback() {
                 </div>
                 </div>
 
-                <div className='flex flex-col justify-center gap-1 p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-2xl'>
+                <div className='flex flex-col justify-center gap-1 p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-lg'>
                 <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
                 <p className='text-xs md:text-sm lg:text-base text-justify'>{(data.id) ? data.description : `${data.description.slice(0, 70)}...`}</p>
                 </div>
