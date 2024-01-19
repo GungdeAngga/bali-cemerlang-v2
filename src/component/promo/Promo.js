@@ -112,7 +112,7 @@ export default function Promo() {
         {data.map ((data) => (
           <div className='bg-white h-[190px] md:h-[250px] lg:h-[370px] text-black rounded-xl'>
             <div className='h-28 md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl border-x-2 border-t-2 border-gray-400'>
-              <img src={data.image} alt='' className='h-[70px] w-[70px] md:h-32 md:w-32 lg:h-full lg:w-full rounded-full lg:rounded-t-lg lg:rounded-b-none'/>
+              <img src={data.image} alt='' className='h-24 w-24 md:h-32 md:w-32 lg:h-full lg:w-full rounded-full lg:rounded-t-lg lg:rounded-b-none'/>
             </div>
 
             <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-lg'>

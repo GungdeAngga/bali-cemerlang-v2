@@ -174,7 +174,7 @@ export default function CustomerFeedback() {
   ]
 
   return (
-    <div class='w-3/4 m-auto'>
+    <div class='w-3/4 m-auto lg:pb-10'>
         <div class='mt-7 lg:mt-20 text-center text-xs md:text-sm lg:text-base'>
             <p className='font-bold'>Our Customer Feedback</p>
             <p>Don’t take our word for it. Trust our customers</p>
@@ -182,7 +182,7 @@ export default function CustomerFeedback() {
         <div className='mt-6 lg:mt-9'>
         <Slider {...settings}>
             {data.map ((data) => (
-            <div className='bg-white h-[180px] md:h-[250px] lg:h-[290px] text-black rounded-xl'>
+            <div className='bg-white h-[180px] md:h-[250px] lg:h-[200px] text-black rounded-xl'>
                 <div className='h-16 md:h-20 lg:h-24 flex p-4 items-center rounded-t-xl border-x-2 border-t-2 border-gray-400'>
                 <img src={data.image} alt='' className='h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 rounded-xl'/>
                 <div className='flex ml-28 md:ml-20 lg:ml-64'>
@@ -196,7 +196,7 @@ export default function CustomerFeedback() {
                 </div>
                 </div>
 
-                <div className='flex flex-col justify-center gap-1 p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-lg'>
+                <div className='flex flex-col justify-center p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-lg'>
                 <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
                 <p className='text-xs md:text-sm lg:text-base text-justify'>{(data.id) ? data.description : `${data.description.slice(0, 70)}...`}</p>
                 </div>

@@ -43,7 +43,7 @@ export default function LandingPage() {
         <CustomerFeedback/>
 
         <div class='flex justify-center item-center mt-6 h-40 md:h-44 lg:h-52'>
-          <div class='w-full bg-gray-300'>
+          <div class='w-full bg-LightShadeofGray'>
             <div class='pt-8 md:pt-11 lg:pt-14'>
                 <div class='text-center'>
                 <p className='font-bold text-sm md:text-base lg:text-xl'>Our Partner</p>
