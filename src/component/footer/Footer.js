@@ -17,7 +17,7 @@ export default function Footer() {
             <div className='flex flex-col md:flex md:flex-row md:border-b-2 md:border-white lg:mt-4'>
 
                 <div className='md:w-2/4 lg:ml-10 '>
-                    <img src='/assets/LogobaliCemerlang.svg' alt='logo' className='w-10 h-10 mt-2 lg:mt-0 lg:w-14 lg:h-14'/>
+                    <img src='/assets/LogoBaliCemerlang.svg' alt='logo' className='w-10 h-10 mt-2 lg:mt-0 lg:w-14 lg:h-14'/>
                     <div className='lg:pt-4'>
                         <p className='text-xs md:text-sm lg:text-base text-white text-justify pt-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.</p>
                         <div className='flex items-center pt-2 lg:pt-6'>
