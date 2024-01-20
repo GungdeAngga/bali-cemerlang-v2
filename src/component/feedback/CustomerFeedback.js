@@ -6,26 +6,28 @@ import { FaStar } from "react-icons/fa";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        
-        onClick={onClick}
-      ><FaArrowAltCircleRight style={{ ...style, fontSize: "25px", color: "red" }} /></div>
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        
-        onClick={onClick}
-      ><FaArrowAltCircleLeft style={{ ...style, display: "block", fontSize: "25px", color: "red" }} /></div>
-    );
-  }
+  const { className, style, onClick } = props;
+  return (
+    <div>
+      <FaArrowAltCircleRight
+      className={className}
+      onClick={onClick} 
+      style={{ ...style, display: "block", color: "red" }} />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div>
+      <FaArrowAltCircleLeft 
+      className={className}
+      onClick={onClick} 
+      style={{ ...style, display: "block", fontSize: "25px", color: "red" }} />
+    </div>
+  );
+}
 
 export default function CustomerFeedback() {
   const settings = {

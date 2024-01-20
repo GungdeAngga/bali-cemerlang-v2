@@ -3,28 +3,31 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
+  const { className, style, onClick } = props;
+  return (
+    <div>
+      <FaArrowAltCircleRight
+      className={className}
+      onClick={onClick} 
+      style={{ ...style, display: "block", color: "red" }} />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div>
+      <FaArrowAltCircleLeft 
+      className={className}
+      onClick={onClick} 
+      style={{ ...style, display: "block", fontSize: "25px", color: "red" }} />
+    </div>
+  );
+}
   const data = [
     {
       title: 'promo 1',
