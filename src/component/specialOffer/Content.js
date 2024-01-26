@@ -168,14 +168,14 @@ export default function Content() {
       <Slider {...settings}>
         {data.map ((data) => (
           <div className='bg-white h-[200px] md:h-[270px] lg:h-[390px] text-black rounded-xl'>
-            <div className='h-[95px] md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl'>
-              <img src={data.image} alt='' className='h-[94px] w-[130px] md:h-32 md:w-32 lg:h-52 lg:w-52 md:rounded-full'/>
+            <div className='h-[95px] md:h-36 lg:h-56 flex justify-center items-center md:bg-VividRed rounded-t-xl'>
+              <img src={data.image} alt='' className='h-full w-full md:h-32 md:w-32 lg:h-52 lg:w-52 object-cover rounded-t-xl md:rounded-full'/>
             </div>
 
             <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4'>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <p className='text-xs md:text-sm lg:text-base text-justify px-3'>{(data.id) ? data.description : `${data.description.slice(0, 50)}...`}</p>
-              <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 rounded-xl'>Read More</button>
+              <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 mt-3 md:mt-1 rounded-xl'>Read More</button>
             </div>
           </div>
         ))}

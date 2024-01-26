@@ -125,7 +125,7 @@ export default function Promo() {
         ))}
       </Slider>
       </div>
-          <div className='mt-4 md:mt-8 lg:mt-16 pb-4 md:pb-6 lg:pb-10'/>
+          <div className='mt-4 md:mt-8 lg:mt-16 pb-1'/>
     </div>
   )
 }
