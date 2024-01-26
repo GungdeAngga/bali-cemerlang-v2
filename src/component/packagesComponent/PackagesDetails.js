@@ -8,11 +8,11 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div>
+    <div className='hidden md:block'>
       <FaArrowAltCircleRight
       className={className}
       onClick={onClick} 
-      style={{ ...style, display: "block", color: "red" }} />
+      style={{ ...style, color: "red" }} />
     </div>
   );
 }
@@ -20,11 +20,11 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div>
+    <div className='hidden md:block'>
       <FaArrowAltCircleLeft 
       className={className}
       onClick={onClick} 
-      style={{ ...style, display: "block", fontSize: "25px", color: "red" }} />
+      style={{ ...style, color: "red" }} />
     </div>
   );
 }

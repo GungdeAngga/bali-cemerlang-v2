@@ -8,11 +8,11 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div>
+      <div className='hidden md:block'>
         <FaArrowAltCircleRight
         className={className}
         onClick={onClick} 
-        style={{ ...style, display: "block", color: "red" }} />
+        style={{ ...style , color: "red" }} />
       </div>
     );
   }
@@ -20,11 +20,11 @@ function SampleNextArrow(props) {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div>
+      <div className='hidden md:block'>
         <FaArrowAltCircleLeft 
         className={className}
         onClick={onClick} 
-        style={{ ...style, display: "block", fontSize: "25px", color: "red" }} />
+        style={{ ...style, color: "red" }} />
       </div>
     );
   }
@@ -59,7 +59,8 @@ export default function Content() {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+
           }
         }
       ]
@@ -158,20 +159,20 @@ export default function Content() {
   ]
 
   return (
-    <div class='w-3/4 m-auto'>
-      <div class='mt-7 lg:mt-20 text-center text-xs md:text-sm lg:text-base'>
-        <p className='font-bold'>Special Offer</p>
+    <div class='w-11/12 md:w-3/4 m-auto'>
+      <div class='mt-7 lg:mt-20 text-center text-xs md:text-sm lg:text-base '>
+        <p className='font-bold pt-4 md:pt-6 lg:pt-10'>Special Offer</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper nec sed ligula ac tellus senectus ut. Ac.</p>
       </div>
       <div className='mt-6 lg:w-full lg:mt-9'>
       <Slider {...settings}>
         {data.map ((data) => (
-          <div className='bg-white h-[230px] md:h-[330px] lg:h-[460px] text-black rounded-xl'>
+          <div className='bg-white h-[200px] md:h-[270px] lg:h-[390px] text-black rounded-xl'>
             <div className='h-[95px] md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl'>
-              <img src={data.image} alt='' className='h-20 w-20 md:h-32 md:w-32 lg:h-52 lg:w-52 rounded-full'/>
+              <img src={data.image} alt='' className='h-[94px] w-[130px] md:h-32 md:w-32 lg:h-52 lg:w-52 md:rounded-full'/>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-2 rounded-b-xl shadow-lg'>
+            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4'>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <p className='text-xs md:text-sm lg:text-base text-justify px-3'>{(data.id) ? data.description : `${data.description.slice(0, 50)}...`}</p>
               <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 rounded-xl'>Read More</button>
@@ -180,7 +181,7 @@ export default function Content() {
         ))}
       </Slider>
       </div>
-      <div className='flex justify-center mt-1'>
+      <div className='flex justify-center mt-4 md:mt-8 lg:mt-16 pb-4 md:pb-6 lg:pb-10'>
         <Link to='/SpecialOfferPage'>
           <button class='h-8 md:h-10 lg:h-14 w-[200px] md:w-[300px] lg:w-[400px] text-sm md:text-lg lg:text-2xl font-bold bg-VividRed rounded-full font-poppins text-white'>
             clik here to see more offers

@@ -8,7 +8,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div>
+    <div className='hidden md:block'>
       <FaArrowAltCircleRight
       className={className}
       onClick={onClick} 
@@ -20,7 +20,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div>
+    <div className='hidden md:block'>
       <FaArrowAltCircleLeft 
       className={className}
       onClick={onClick} 
@@ -176,7 +176,7 @@ export default function CustomerFeedback() {
   ]
 
   return (
-    <div class='w-3/4 m-auto lg:pb-10'>
+    <div class='w-11/12 md:w-3/4 m-auto lg:pb-10'>
         <div class='mt-7 lg:mt-20 text-center text-xs md:text-sm lg:text-base'>
             <p className='font-bold'>Our Customer Feedback</p>
             <p>Don’t take our word for it. Trust our customers</p>
@@ -184,10 +184,10 @@ export default function CustomerFeedback() {
         <div className='mt-6 lg:mt-9'>
         <Slider {...settings}>
             {data.map ((data) => (
-            <div className='bg-white h-[180px] md:h-[250px] lg:h-[200px] text-black rounded-xl'>
+            <div className='bg-white h-[180px] md:h-[250px] lg:h-[230px] text-black rounded-xl'>
                 <div className='h-16 md:h-20 lg:h-24 flex p-4 items-center rounded-t-xl border-x-2 border-t-2 border-gray-400'>
                 <img src={data.image} alt='' className='h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 rounded-xl'/>
-                <div className='flex ml-28 md:ml-20 lg:ml-64'>
+                <div className='absolute flex ml-56 md:ml-[154px] lg:ml-[340px]'>
                     {[1, 2, 3, 4, 5].map((ratingValue) => (
                     <FaStar
                         key={ratingValue}

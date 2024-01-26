@@ -7,7 +7,7 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div>
+    <div className='hidden md:block'>
       <FaArrowAltCircleRight
       className={className}
       onClick={onClick} 
@@ -19,7 +19,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <div>
+    <div className='hidden md:block'>
       <FaArrowAltCircleLeft 
       className={className}
       onClick={onClick} 
@@ -104,20 +104,20 @@ export default function Promo() {
 
 
   return (
-    <div class='w-3/4 m-auto'>
+    <div class='w-11/12 md:w-3/4 m-auto'>
       <div class='mt-7 lg:mt-20 text-center text-xs md:text-sm lg:text-base'>
-        <p className='font-bold'>Promo</p>
+        <p className='font-bold pt-4 md:pt-6 lg:pt-10'>Promo</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper nec sed ligula ac tellus senectus ut. Ac.</p>
       </div>
       <div className='mt-6 lg:mt-9'>
       <Slider {...settings}>
         {data.map ((data) => (
-          <div className='bg-white h-[190px] md:h-[250px] lg:h-[370px] text-black rounded-xl'>
+          <div className='bg-white h-[180px] md:h-[223px] lg:h-[338px] text-black rounded-xl'>
             <div className='h-28 md:h-36 lg:h-56 flex justify-center items-center bg-VividRed rounded-t-xl border-x-2 border-t-2 border-gray-400'>
               <img src={data.image} alt='' className='h-24 w-24 md:h-32 md:w-32 lg:h-full lg:w-full rounded-full lg:rounded-t-lg lg:rounded-b-none'/>
             </div>
 
-            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl shadow-lg'>
+            <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4 border-x-2 border-b-2 border-gray-400 rounded-b-xl '>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 rounded-xl'>Read More</button>
             </div>
@@ -125,7 +125,7 @@ export default function Promo() {
         ))}
       </Slider>
       </div>
-
+          <div className='mt-4 md:mt-8 lg:mt-16 pb-4 md:pb-6 lg:pb-10'/>
     </div>
   )
 }

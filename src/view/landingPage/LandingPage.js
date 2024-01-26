@@ -18,7 +18,9 @@ export default function LandingPage() {
 
         <ShrinkingNavbar/>
         <SearchInput/>
-        <Content/>
+        <div className='w-full bg-LightShadeofGray'>
+          <Content/>
+        </div>
 
         <div class='flex items-center justify-center'>
           <div class='flex flex-row'>
@@ -39,7 +41,10 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <Promo/>
+        <div className='w-full bg-LightShadeofGray'>
+          <Promo/>
+        </div>
+        
         <CustomerFeedback/>
 
         <div class='flex justify-center item-center mt-6 h-40 md:h-44 lg:h-52'>
