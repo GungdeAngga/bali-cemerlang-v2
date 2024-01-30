@@ -10,6 +10,12 @@ export default function NavbarMenu() {
     setDropdownOpen(!isDropdownOpen);
   };
 
+  const [isSearchOpen, setSearchOpen] = useState(false);
+
+  const handleToggleSearch = () => {
+    setSearchOpen(!isSearchOpen);
+  };
+
   const [isScrolled, setIsScrolled] = useState(false);
   
     useEffect(() => {
@@ -26,7 +32,7 @@ export default function NavbarMenu() {
     }, []);
   return (
 
-    <div className={`flex md:items-center ${isDropdownOpen ? 'h-12 bg-VividRed' : 'h-12 bg-transparent'}`}>
+    <div className={`flex md:items-center ${isDropdownOpen ? 'h-12 bg-VividRed' : 'h-12 bg-transparent'} ${isSearchOpen ? 'md:bg-VividRed md:h-20 md:-mt-4 md:b-2 lg:h-32 lg:-mt-10' : 'md:bg-transparent' }`}>
       <div class='w-8 pt-2 ml-8 md:w-12 md:mt-2 md:ml-7 lg:w-16 lg:ml-14 lg:mt-10'>
         <Link to='/'>
           <img src='/assets/LogoBaliCemerlang.svg' alt='Logo'/>
@@ -74,20 +80,26 @@ export default function NavbarMenu() {
                 </a>
               </li>
               <li>
-                <div className='w-4 flex'>
-                <img src='/assets/search1.svg' alt='search'/>
+                <button onClick={handleToggleSearch} className='w-4 flex'>
+                  <img src='/assets/search1.svg' alt='search'/>
+                </button>
+                <div className={`${isSearchOpen ? 'block' : 'hidden' } absolute mt-2 right-0 border-t`}>   
+                  <div className='h-8 w-screen bg-VividRed pt-2 px-8'>
+                    <img src='./assets/search2.svg' alt='search' className='absolute w-3 ml-2 mt-[2px]'/>
+                    <input type='text' placeholder='search' className='w-full pl-6 rounded-md text-black'/>
+                  </div> 
                 </div>
               </li>
               <li>
-                <div className='w-5'>
+                <button className='w-5'>
                   <img src='/assets/user1.svg' alt='user'/>
-                </div>
+                </button>
               </li>
               {/* Add similar list items for other menu options */}
             </ul>
           </div>
         ) : (
-          <ul className='flex md:flex-row md:items-center md:mt-2 lg:mt-10'>
+          <ul className={`${isSearchOpen ? 'bg-VividRed' : 'bg-transparent' } flex md:flex-row md:items-center md:mt-2 lg:mt-10`}>
           <li>
             <a href="/" className="font-poppins text-white hover:text-gray-300 pl-6">
               Home
@@ -114,14 +126,20 @@ export default function NavbarMenu() {
             </a>
           </li>
           <li>
-            <div className='pl-6'>
+            <button onClick={handleToggleSearch} className='pl-6'>
               <img src='/assets/search1.svg' alt='search'/>
+            </button>
+            <div className={`${isSearchOpen ? 'block' : 'hidden' } absolute mt-4 lg:mt-6 right-0 border-t`}>   
+              <div className='h-8 w-screen md:w-[400px] md:h-12 bg-VividRed pt-2 md:pt-3 px-8 md:px-3 md:rounded-lg'>
+                <img src='./assets/search2.svg' alt='search' className='absolute w-3 ml-2 mt-[2px] md:mt-[7px]'/>
+                <input type='text' placeholder='search' className='w-full pl-6 rounded-md text-black'/>
+              </div> 
             </div>
           </li>
           <li>
-            <div className='pl-6'>
+            <button className='pl-6'>
               <img src='/assets/user1.svg' alt='user'/>
-            </div>
+            </button>
           </li>
         </ul>
         )}
