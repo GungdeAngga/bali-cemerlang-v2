@@ -67,94 +67,39 @@ export default function Content() {
   };
   const data = [
     {
-      title: 'promo 1',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image1.png',
+      title: 'Besakih',
+      description: 'Sebagai pura terbesar dan paling suci di Bali, Pura Besakih terletak di lereng Gunung Agung dan dianggap sebagai "Pura Agung Besakih."',
+      image: './assets/Besakih.jpg',
     },
     {
-      title: 'promo 2',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image2.png',
+      title: 'GWK',
+      description: 'Sebuah taman budaya yang menampilkan patung Garuda Wisnu Kencana setinggi 122 meter, yang sedang dalam proses pembangunan.',
+      image: './assets/GWK.jpg',
     },
     {
-      title: 'promo 3',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image3.png',
+      title: 'Kuta Beach',
+      description: 'Salah satu pantai paling terkenal di Bali, Kuta Beach menawarkan ombak yang sempurna untuk berselancar dan memiliki atmosfer yang hidup di sekitar area pantai.',
+      image: './assets/Kuta.jpg',
     },
     {
-      title: 'promo 4',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image1.png',
+      title: 'Monkey Forest',
+      description: 'Hutan Monkey di Ubud adalah tempat tinggal bagi ratusan monyet ekor panjang yang dapat dilihat dengan bebas di lingkungan alaminya.',
+      image: './assets/MonkeyForest.jpg',
     },
     {
-      title: 'promo 5',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image2.png',
+      title: 'Tanah Lot',
+      description: 'Sebuah pura laut yang terletak di atas batu karang besar, memberikan pemandangan matahari terbenam yang spektakuler.',
+      image: './assets/TanahLot.jpg',
     },
     {
-      title: 'promo 6',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image3.png',
+      title: 'Tegalalang Rice Terrace',
+      description: 'Teras-teras sawah yang indah di Tegallalang menawarkan pemandangan alam yang menakjubkan dan merupakan tempat yang populer untuk berfoto.',
+      image: './assets/TegalalangRice.jpg',
     },
     {
-      title: 'promo 7',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image1.png',
-    },
-    {
-      title: 'promo 8',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image2.png',
-    },
-    {
-      title: 'promo 9',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image3.png',
-    },
-    {
-      title: 'promo 10',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image1.png',
-    },
-    {
-      title: 'promo 11',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image2.png',
-    },
-    {
-      title: 'promo 12',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image3.png',
-    },
-    {
-      title: 'promo 13',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image1.png',
-    },
-    {
-      title: 'promo 14',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image2.png',
-    },
-    {
-      title: 'promo 15',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image3.png',
-    },
-    {
-      title: 'promo 16',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image1.png',
-    },
-    {
-      title: 'promo 17',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image2.png',
-    },
-    {
-      title: 'promo 18',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.',
-      image: './assets/image3.png',
+      title: 'Uluwatu',
+      description: 'Terletak di tebing tinggi yang menghadap Samudra Hindia, Pura Uluwatu menawarkan pemandangan laut yang menakjubkan dan pertunjukan tari Kecak di sore hari.',
+      image: './assets/Uluwatu.jpg',
     },
   ]
 
