@@ -107,7 +107,7 @@ export default function Content() {
     <div class='w-11/12 md:w-3/4 m-auto'>
       <div class='mt-7 lg:mt-20 text-center text-xs md:text-sm lg:text-base '>
         <p className='font-bold pt-4 md:pt-6 lg:pt-10'>Special Offer</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper nec sed ligula ac tellus senectus ut. Ac.</p>
+        <p>You can choose your offer here</p>
       </div>
       <div className='mt-6 lg:w-full lg:mt-9'>
       <Slider {...settings}>

@@ -30,7 +30,7 @@ export default function LandingPage() {
             
             <div class='md:px-5 lg:px-10 lg:pt-32 w-3/4'>
               <p class='font-poppins font-bold text-sm pt-6 md:text-xl lg:text-3xl '>Why Choose Bali Cemerlang Tour?</p>
-              <p class='font-poppins text-xs pt-1 md:text-xl lg:text-xl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p class='font-poppins text-xs pt-1 md:text-xl lg:text-xl'>Because Bali cemerlang offering</p>
               <p class='font-poppins text-xs pt-1 md:text-xl lg:text-xl'>✔️ Best price range</p>
               <p class='font-poppins text-xs pt-1 md:text-xl lg:text-xl'>✔️ Experienced for more than 10 years</p>
               <p class='font-poppins text-xs pt-1 md:text-xl lg:text-xl'>✔️ A variety of accommodations to choose from</p>

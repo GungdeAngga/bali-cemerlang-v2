@@ -19,7 +19,7 @@ export default function Footer() {
                 <div className='md:w-2/4 lg:ml-10 '>
                     <img src='/assets/LogoBaliCemerlang.svg' alt='logo' className='w-10 h-10 mt-2 lg:mt-0 lg:w-14 lg:h-14'/>
                     <div className='lg:pt-4'>
-                        <p className='text-xs md:text-sm lg:text-base text-white text-justify pt-1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus adipiscing maecenas turpis fringilla cursus mi, fermentum.</p>
+                        <p className='text-xs md:text-sm lg:text-base text-white text-justify pt-1'>The Experience of living starts when you find the pleasure of enjoying interesting place all over the world creating unforgetable moments which last a lif</p>
                         <div className='flex items-center pt-2 lg:pt-6'>
                             <ul className="flex space-x-2 md:space-x-4 lg:space-x-6">
                                 <li>

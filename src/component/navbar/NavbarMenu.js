@@ -138,7 +138,9 @@ export default function NavbarMenu() {
           </li>
           <li>
             <button className='pl-6'>
-              <img src='/assets/user1.svg' alt='user'/>
+              <Link to='/LoginPage'>
+                <img src='/assets/user1.svg' alt='user'/>
+              </Link>
             </button>
           </li>
         </ul>
