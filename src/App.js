@@ -7,6 +7,7 @@ import SpecialOfferPage from "./view/offer/SpecialOfferPage";
 import AboutUsPage from "./view/aboutUs/AboutUsPage";
 import GaleryPage from "./view/galery/GaleryPage";
 import NewsPage from "./view/news/NewsPage";
+import LoginPage from "./view/login/LoginPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/AboutUsPage" element={<AboutUsPage/>}/>
         <Route path="/GaleryPage" element={<GaleryPage/>}/>
         <Route path="/NewsPage" element={<NewsPage/>}/>
+        <Route path="/LoginPage" element={<LoginPage/>}/>
       </Routes>
     </BrowserRouter>
   );
