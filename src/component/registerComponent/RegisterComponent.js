@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa"
 
@@ -110,7 +111,10 @@ export default function RegisterComponent() {
         </div>
 
         <div className='flex flex-col mt-6 text-sm md:text-base'>
-            <button className='bg-VividRed  w-full rounded-sm text-white font-bold h-7 md:h-10'>Create Account</button>
+            <Link to='/VerifAccountPage'>
+                <button className='bg-VividRed  w-full rounded-sm text-white font-bold h-7 md:h-10'>Create Account</button>
+            </Link>
+            
             <span className='text-center mt-2'>
                 Already have an account? 
                 <a href='/LoginPage' className='text-VividRed ml-1'>Login</a> 
