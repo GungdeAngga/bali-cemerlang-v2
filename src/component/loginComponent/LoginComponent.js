@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 
@@ -71,7 +70,7 @@ export default function LoginComponent() {
             <button className='bg-VividRed  w-full rounded-sm text-white font-bold h-7 md:h-10'>Login</button>
             <span className='text-center mt-2'>
                 Don't have any account? 
-                <a href='/' className='text-VividRed ml-1'>sign up</a> 
+                <a href='/RegisterPage' className='text-VividRed ml-1'>sign up</a> 
             </span>
         </div>
 
