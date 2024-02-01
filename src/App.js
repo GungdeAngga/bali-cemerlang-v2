@@ -10,6 +10,7 @@ import NewsPage from "./view/news/NewsPage";
 import LoginPage from "./view/login/LoginPage";
 import RegisterPage from "./view/register/RegisterPage";
 import ForgotPasswordPage from "./view/forgotPassword/ForgotPasswordPage";
+import VerifAccountPage from "./view/verifAccount/VerifAccountPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/LoginPage" element={<LoginPage/>}/>
         <Route path="/RegisterPage" element={<RegisterPage/>}/>
         <Route path="/ForgotPasswordPage" element={<ForgotPasswordPage/>}/>
+        <Route path="/VerifAccountPage" element={<VerifAccountPage/>}/>
       </Routes>
     </BrowserRouter>
   );
