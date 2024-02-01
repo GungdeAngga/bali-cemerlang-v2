@@ -1,9 +1,1 @@
-import React from 'react'
-
-export default function api() {
-  return (
-    <div>
-        
-    </div>
-  )
-}
+export const baseApi = "http://maiharta.ddns.net:6969/api/";
