@@ -9,6 +9,7 @@ import GaleryPage from "./view/galery/GaleryPage";
 import NewsPage from "./view/news/NewsPage";
 import LoginPage from "./view/login/LoginPage";
 import RegisterPage from "./view/register/RegisterPage";
+import ForgotPasswordPage from "./view/forgotPassword/ForgotPasswordPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/NewsPage" element={<NewsPage/>}/>
         <Route path="/LoginPage" element={<LoginPage/>}/>
         <Route path="/RegisterPage" element={<RegisterPage/>}/>
+        <Route path="/ForgotPasswordPage" element={<ForgotPasswordPage/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -62,7 +62,7 @@ export default function LoginComponent() {
             </div>
             
             <div className='basis-1/2 text-right'>
-                <a href="/" className='md:text-right text-VividRed'>Forgot Password?</a>
+                <a href="/ForgotPasswordPage" className='md:text-right text-VividRed'>Forgot Password?</a>
             </div>
         </div>
 
