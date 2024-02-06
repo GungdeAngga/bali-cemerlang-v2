@@ -12,6 +12,7 @@ import RegisterPage from "./view/register/RegisterPage";
 import ForgotPasswordPage from "./view/forgotPassword/ForgotPasswordPage";
 import VerifAccountPage from "./view/verifAccount/VerifAccountPage";
 import PromoDetailsPage from "./view/Promo/PromoDetailsPage";
+import SpecialOfferDetalisPage from "./view/offer/SpecialOfferDetalisPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/ForgotPasswordPage" element={<ForgotPasswordPage/>}/>
         <Route path="/VerifAccountPage" element={<VerifAccountPage/>}/>
         <Route path="/PromoDetailsPage" element={<PromoDetailsPage/>}/>
+        <Route path="/SpecialOfferDetalisPage" element={<SpecialOfferDetalisPage/>}/>
       </Routes>
     </BrowserRouter>
   );

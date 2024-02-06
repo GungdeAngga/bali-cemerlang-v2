@@ -120,7 +120,9 @@ export default function Content() {
             <div className='flex flex-col justify-center items-center gap-1 p-2 lg:gap-4 lg:p-4'>
               <p className='text-sm font-bold md:text-base lg:text-xl'>{data.title}</p>
               <p className='text-xs md:text-sm lg:text-base text-justify px-3 h-5 md:h-10'>{(data.id) ? data.description : `${data.description.slice(0, 50)}...`}</p>
+              <Link to='/SpecialOfferDetalisPage'>
               <button className='bg-VividRed text-white text-xs md:text-base lg:text-lg px-6 py-1 mt-3 md:mt-1 rounded-xl'>Read More</button>
+              </Link>
             </div>
           </div>
         ))}
