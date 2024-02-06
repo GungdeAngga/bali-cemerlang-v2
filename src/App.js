@@ -11,6 +11,7 @@ import LoginPage from "./view/login/LoginPage";
 import RegisterPage from "./view/register/RegisterPage";
 import ForgotPasswordPage from "./view/forgotPassword/ForgotPasswordPage";
 import VerifAccountPage from "./view/verifAccount/VerifAccountPage";
+import PromoDetailsPage from "./view/Promo/PromoDetailsPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/RegisterPage" element={<RegisterPage/>}/>
         <Route path="/ForgotPasswordPage" element={<ForgotPasswordPage/>}/>
         <Route path="/VerifAccountPage" element={<VerifAccountPage/>}/>
+        <Route path="/PromoDetailsPage" element={<PromoDetailsPage/>}/>
       </Routes>
     </BrowserRouter>
   );

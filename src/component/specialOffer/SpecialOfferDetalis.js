@@ -176,7 +176,7 @@ export default function SpecialOfferDetalis() {
         </Link>
         <div className='text-center text-xs md:text-sm lg:text-base lg:-mt-8'>
             <p className='font-bold'>Special Offer</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper nec sed ligula ac tellus senectus ut. Ac.</p>
+            <p>You can choose your offer here</p>
         </div>
         
       </div>
