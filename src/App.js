@@ -14,10 +14,21 @@ import VerifAccountPage from "./view/verifAccount/VerifAccountPage";
 import PromoDetailsPage from "./view/Promo/PromoDetailsPage";
 import SpecialOfferDetalisPage from "./view/offer/SpecialOfferDetalisPage";
 
+import Dashboard from "./adminView/Dashboard";
+import OfferPage from "./adminView/OfferPage";
+import AddOfferPage from "./adminView/AddOfferPage";
+import EditOfferPage from "./adminView/EditOfferPage";
+// import TiketPage from "./adminView/TiketPage";
+// import AddTiketPage from "./adminView/AddTiketPage";
+// import EditTiketPage from "./adminView/EditTiketPage";
+import PromoPage from "./adminView/PromoPage";
+import AddPromoPage from "./adminView/AddPromoPage";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* user */}
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/PackagesPage" element={<PackagesPage/>}/>
         <Route path="/PaymentPage" element={<PaymentPage/>}/>
@@ -31,6 +42,17 @@ function App() {
         <Route path="/VerifAccountPage" element={<VerifAccountPage/>}/>
         <Route path="/PromoDetailsPage" element={<PromoDetailsPage/>}/>
         <Route path="/SpecialOfferDetalisPage" element={<SpecialOfferDetalisPage/>}/>
+        <Route path="/" element={<LandingPage/>}/>
+        {/* admin */}
+        <Route path="/AdminPage" element={<Dashboard/>}/>
+        <Route path="/AdminOffer" element={<OfferPage/>}/>
+        <Route path="/AdminTambahOffer" element={<AddOfferPage/>}/>
+        <Route path="/AdminEditOffer" element={<EditOfferPage/>}/>
+        {/* <Route path="/AdminTiket" element={<TiketPage/>}/>
+        <Route path="/AdminTambahTiket" element={<AddTiketPage/>}/>
+        <Route path="/AdminEditTiket" element={<EditTiketPage/>}/> */}
+        <Route path="/AdminPromo" element={<PromoPage/>}/>
+        <Route path="/AdminTambahPromo" element={<AddPromoPage/>}/>
       </Routes>
     </BrowserRouter>
   );

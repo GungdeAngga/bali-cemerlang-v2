@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const baseApi = "http://localhost:8000/api/";
+const baseApi = "http://maiharta.ddns.net:6969/api/";
 
 // for getting image
-export const baseStorage = "http://localhost:8000/storage/";
+export const baseStorage = "http://maiharta.ddns.net:6969/storage/";
 
 // axios function
 export const getPackage = () =>
