@@ -105,7 +105,7 @@ export default function DataTable({dataPromo}) {
               <td className="border px-4 py-2">{item.JudulPromo}</td>
               <td className="border px-4 py-2">{item.IsiPromo}</td>
               <td className="border px-4 py-2">
-              <Link to='/'>
+              <Link to='/AdminEditPromo'>
                 <button onClick={() => handleEdit(item.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
                   Edit
                 </button>

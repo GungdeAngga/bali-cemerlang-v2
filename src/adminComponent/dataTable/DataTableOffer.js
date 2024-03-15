@@ -107,7 +107,7 @@ export default function DataTable({dataOffer}) {
               <td className="border px-4 py-2">{item.Isi}</td>
               <td className="border px-4 py-2">{item.Jenis}</td>
               <td className="border px-4 py-2">
-              <Link to='/EditOffer'>
+              <Link to='/AdminEditOffer'>
                 <button onClick={() => handleEdit(item.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
                   Edit
                 </button>

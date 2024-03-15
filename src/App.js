@@ -23,6 +23,7 @@ import EditOfferPage from "./adminView/EditOfferPage";
 // import EditTiketPage from "./adminView/EditTiketPage";
 import PromoPage from "./adminView/PromoPage";
 import AddPromoPage from "./adminView/AddPromoPage";
+import EditPromoPage from "./adminView/EditPromoPage";
 
 function App() {
   return (
@@ -48,11 +49,9 @@ function App() {
         <Route path="/AdminOffer" element={<OfferPage/>}/>
         <Route path="/AdminTambahOffer" element={<AddOfferPage/>}/>
         <Route path="/AdminEditOffer" element={<EditOfferPage/>}/>
-        {/* <Route path="/AdminTiket" element={<TiketPage/>}/>
-        <Route path="/AdminTambahTiket" element={<AddTiketPage/>}/>
-        <Route path="/AdminEditTiket" element={<EditTiketPage/>}/> */}
         <Route path="/AdminPromo" element={<PromoPage/>}/>
         <Route path="/AdminTambahPromo" element={<AddPromoPage/>}/>
+        <Route path="/AdminEditPromo" element={<EditPromoPage/>}/>
       </Routes>
     </BrowserRouter>
   );

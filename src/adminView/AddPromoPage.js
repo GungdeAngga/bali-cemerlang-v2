@@ -17,7 +17,7 @@ export default function AddOfferPage() {
           </div>
         <div className='flex pt-3'>
           <div className='flex items-center justify-center pr-5'>
-            <a href='/Promo'><img src='./adminAssets/back1.svg' alt='back' className='w-8 '/></a>
+            <a href='/AdminPromo'><img src='./adminAssets/back1.svg' alt='back' className='w-8 '/></a>
           </div>
           <p className='text-5xl text-VividRed font-bold'>Tambah Promo</p>  
         </div>

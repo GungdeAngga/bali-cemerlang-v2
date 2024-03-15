@@ -32,3 +32,12 @@ export const getPromo = () =>
       order_direction: "desc",
     },
   }).then(({ data }) => data.data);
+
+export const createOffer = () =>
+  axios({
+    method: "post",
+    url: baseApi + "offer",
+    params:{
+      order_direction: "desc",
+    },
+  }).then(({ data }) => data.data);
