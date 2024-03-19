@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import useQuery from "../../component/util/hooks/useQuery";
+import { getOffer } from "../../component/util/api/api";
 
-export default function DataTable({dataOffer}) {
-    const [rowsPerPage, setRowsPerPage] = useState(5); // Default number of rows per page
+export default function DataTableOffer() {
+    const [data, setRowsPerPage] = useState(5); // Default number of rows per page
     const [currentPage, setCurrentPage] = useState(1);
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
@@ -41,8 +43,8 @@ export default function DataTable({dataOffer}) {
 
       const sortedAndPaginatedData = () => {
         const sorted = sortedData();
-        const startIndex = (currentPage - 1) * rowsPerPage;
-        const endIndex = startIndex + rowsPerPage;
+        const startIndex = (currentPage - 1) * data;
+        const endIndex = startIndex + data;
         return sorted.slice(startIndex, endIndex);
       };
 
@@ -61,7 +63,7 @@ export default function DataTable({dataOffer}) {
         return '';
       };
 
-      const totalPageCount = Math.ceil(dataOffer.length / rowsPerPage);
+      const totalPageCount = Math.ceil(data.length / data);
 
       const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -87,6 +89,20 @@ export default function DataTable({dataOffer}) {
         return visiblePageNumbers;
       };
 
+      const { data: dataOffer, isLoading, isError } = useQuery(getOffer);
+
+      if (isLoading) {
+        return <div>Loading...</div>;
+      }
+    
+      if (isError) {
+        return <div>error</div>;
+      }
+    
+      if (!dataOffer) {
+        return null;
+      }
+
   return (
     <div className="overflow-x-auto pt-5">
       <table className="min-w-full table-auto bg-VividRed">
@@ -95,24 +111,22 @@ export default function DataTable({dataOffer}) {
             <th className="border px-4 py-2" onClick={() => requestSort('No')}>No{arrow('No')}</th>
             <th className="border px-4 py-2" onClick={() => requestSort('Judul')}>Judul Offer{arrow('Judul')}</th>
             <th className="border px-4 py-2" onClick={() => requestSort('Isi')}>Isi Offer{arrow('Isi')}</th>
-            <th className="border px-4 py-2" onClick={() => requestSort('Jenis')}>Jenis Offer{arrow('Jenis')}</th>
             <th className="border px-4 py-2" >Tindakan</th> {/* New column for actions */}
           </tr>
         </thead>
         <tbody>
-        {sortedAndPaginatedData().map((item, index) => (
-            <tr key={item.No} className={index % 2 === 0 ? 'bg-white' : 'bg-red-100'}>
-              <td className="border px-4 py-2">{item.No}</td>
-              <td className="border px-4 py-2">{item.Judul}</td>
-              <td className="border px-4 py-2">{item.Isi}</td>
-              <td className="border px-4 py-2">{item.Jenis}</td>
+        {sortedAndPaginatedData().map((data, index) => (
+            <tr key={data.id} className={index % 2 === 0 ? 'bg-white' : 'bg-red-100'}>
+              <td className="border px-4 py-2">{data.No}</td>
+              <td className="border px-4 py-2">{data.judul_offer}</td>
+              <td className="border px-4 py-2">{data.isi_offer}</td>
               <td className="border px-4 py-2">
               <Link to='/AdminEditOffer'>
-                <button onClick={() => handleEdit(item.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
+                <button onClick={() => handleEdit(data.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
                   Edit
                 </button>
               </Link>
-                <button onClick={() => handleDelete(item.id)} className="bg-red-500 text-white px-2 py-1 rounded">
+                <button onClick={() => handleDelete(data.id)} className="bg-red-500 text-white px-2 py-1 rounded">
                   Delete
                 </button>
               </td>
@@ -146,20 +160,20 @@ export default function DataTable({dataOffer}) {
         Dari {totalPageCount} Halaman
         </div>
         <div className="pl-[375px]">
-        <label htmlFor="rowsPerPage" className="mr-1">
+        <label htmlFor="dataOffer" className="mr-1">
           Menampilkan
         </label>
         <select
-          No="rowsPerPage"
+          No="dataOffer"
           className="border border-gray-600 rounded py-1"
-          value={rowsPerPage}
+          value={data}
           onChange={handleRowsPerPageChange}
         >
           <option value={5}>5</option>
           <option value={10}>10</option>
           {/* Add more options for rows per page as needed */}
         </select>
-        <label htmlFor="rowsPerPage" className="ml-1">
+        <label htmlFor="dataOffer" className="ml-1">
           item per halaman
         </label>
         </div>

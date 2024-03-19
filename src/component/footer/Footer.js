@@ -12,9 +12,9 @@ export default function Footer() {
         window.open('https://www.facebook.com/balicemerlangtours/?locale=id_ID', '_blank');
       };
   return (
-    <div className='bottom-0 w-full bg-VividRed h-[500px] md:h-[330px] lg:h-[360px]'>
+    <div className='bottom-0 w-full bg-VividRed h-[515px] md:h-[330px] lg:h-[360px]'>
         <div className='px-4 py-4'>
-            <div className='flex flex-col md:flex md:flex-row md:border-b-2 md:border-white lg:mt-4'>
+            <div className='flex flex-col md:flex md:flex-row md:border-b-2 md:border-white lg:mt-4 lg:h-[260px]'>
 
                 <div className='md:w-2/4 lg:ml-10 '>
                     <img src='/assets/LogoBaliCemerlang.svg' alt='logo' className='w-10 h-10 mt-2 lg:mt-0 lg:w-14 lg:h-14'/>
@@ -47,7 +47,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className='md:ml-5 md:flex md:flex-row md:px-4 lg:px-0 lg:ml-40'>
+                <div className='md:ml-5 md:flex md:flex-row md:px-4 lg:absolute lg:flex lg:right-0'>
                     <div className='md:w-1/4 lg:w-[280px]'>
                         <FooterAboutUs/>
                     </div>

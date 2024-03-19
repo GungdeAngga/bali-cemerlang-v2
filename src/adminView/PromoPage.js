@@ -3,7 +3,7 @@ import SideBar from '../adminComponent/sideBar/SideBar'
 import SearchMenu from '../adminComponent/search/SearchMenu'
 import Garis from '../adminComponent/garis/Garis'
 import PromoMenu from '../adminComponent/promo/PromoMenu'
-import PromoTable from '../adminComponent/promo/PromoTable'
+import DataTablePromo from '../adminComponent/dataTable/DataTablePromo'
 
 export default function PromoPage() {
   return (
@@ -21,7 +21,7 @@ export default function PromoPage() {
           <Garis/>
         </div>
         <div>
-          <PromoTable/>
+          <DataTablePromo/>
         </div>
       </div>
       <p className='absolute bottom-8 right-10 text-VividRed font-bold'>© 2023 Designed & Develop by CV Maiharta</p>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import useQuery from "../../component/util/hooks/useQuery";
+import { getPromo } from "../../component/util/api/api";
 
-export default function DataTable({dataPromo}) {
-    const [rowsPerPage, setRowsPerPage] = useState(5); // Default number of rows per page
+export default function DataTablePromo() {
+    const [data, setRowsPerPage] = useState(5); // Default number of rows per page
     const [currentPage, setCurrentPage] = useState(1);
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
@@ -41,8 +43,8 @@ export default function DataTable({dataPromo}) {
 
       const sortedAndPaginatedData = () => {
         const sorted = sortedData();
-        const startIndex = (currentPage - 1) * rowsPerPage;
-        const endIndex = startIndex + rowsPerPage;
+        const startIndex = (currentPage - 1) * data;
+        const endIndex = startIndex + data;
         return sorted.slice(startIndex, endIndex);
       };
 
@@ -61,7 +63,7 @@ export default function DataTable({dataPromo}) {
         return '';
       };
 
-      const totalPageCount = Math.ceil(dataPromo.length / rowsPerPage);
+      const totalPageCount = Math.ceil(data.length / data);
 
       const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -87,6 +89,20 @@ export default function DataTable({dataPromo}) {
         return visiblePageNumbers;
       };
 
+      const { data: dataPromo, isLoading, isError } = useQuery(getPromo);
+
+      if (isLoading) {
+        return <div>Loading...</div>;
+      }
+    
+      if (isError) {
+        return <div>error</div>;
+      }
+    
+      if (!dataPromo) {
+        return null;
+      }
+
   return (
     <div className="overflow-x-auto pt-5">
       <table className="min-w-full table-auto bg-VividRed">
@@ -99,18 +115,18 @@ export default function DataTable({dataPromo}) {
           </tr>
         </thead>
         <tbody>
-        {sortedAndPaginatedData().map((item, index) => (
-            <tr key={item.No} className={index % 2 === 0 ? 'bg-white' : 'bg-red-100'}>
-              <td className="border px-4 py-2">{item.No}</td>
-              <td className="border px-4 py-2">{item.JudulPromo}</td>
-              <td className="border px-4 py-2">{item.IsiPromo}</td>
+        {sortedAndPaginatedData().map((data, index) => (
+            <tr key={data.No} className={index % 2 === 0 ? 'bg-white' : 'bg-red-100'}>
+              <td className="border px-4 py-2">{data.No}</td>
+              <td className="border px-4 py-2">{data.JudulPromo}</td>
+              <td className="border px-4 py-2">{data.IsiPromo}</td>
               <td className="border px-4 py-2">
               <Link to='/AdminEditPromo'>
-                <button onClick={() => handleEdit(item.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
+                <button onClick={() => handleEdit(data.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
                   Edit
                 </button>
               </Link>
-                <button onClick={() => handleDelete(item.id)} className="bg-red-500 text-white px-2 py-1 rounded">
+                <button onClick={() => handleDelete(data.id)} className="bg-red-500 text-white px-2 py-1 rounded">
                   Delete
                 </button>
               </td>
@@ -150,7 +166,7 @@ export default function DataTable({dataPromo}) {
         <select
           No="rowsPerPage"
           className="border border-gray-600 rounded py-1"
-          value={rowsPerPage}
+          value={data}
           onChange={handleRowsPerPageChange}
         >
           <option value={5}>5</option>

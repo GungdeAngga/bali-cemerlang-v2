@@ -2,8 +2,8 @@ import React from 'react'
 import SideBar from '../adminComponent/sideBar/SideBar'
 import SearchMenu from '../adminComponent/search/SearchMenu'
 import OfferMenu from '../adminComponent/offer/OfferMenu'
-import OfferTable from '../adminComponent/offer/OfferTable'
 import Garis from '../adminComponent/garis/Garis'
+import DataTableOffer from '../adminComponent/dataTable/DataTableOffer'
 
 export default function OfferPage() {
   return (
@@ -21,7 +21,7 @@ export default function OfferPage() {
           <Garis/>
         </div>
         <div>
-          <OfferTable/>
+          <DataTableOffer/>
         </div>
       </div>
       <p className='absolute bottom-8 right-10 text-VividRed font-bold'>© 2023 Designed & Develop by CV Maiharta</p>
