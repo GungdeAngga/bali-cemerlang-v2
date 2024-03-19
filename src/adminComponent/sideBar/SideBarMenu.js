@@ -23,6 +23,12 @@ export default function SideBarMenu() {
                 </a>
             </li>
             <li className='flex'>
+                <a href='/AdminPackage' className='flex'>
+                    <img src='./adminAssets/tiket.svg' alt='news' className='pr-3'/>
+                    Package
+                </a>
+            </li>
+            <li className='flex'>
                 <a href='/AdminPage' className='flex'>
                     <img src='./adminAssets/news.svg' alt='news' className='pr-3'/>
                     News

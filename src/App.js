@@ -18,12 +18,10 @@ import Dashboard from "./adminView/Dashboard";
 import OfferPage from "./adminView/OfferPage";
 import AddOfferPage from "./adminView/AddOfferPage";
 import EditOfferPage from "./adminView/EditOfferPage";
-// import TiketPage from "./adminView/TiketPage";
-// import AddTiketPage from "./adminView/AddTiketPage";
-// import EditTiketPage from "./adminView/EditTiketPage";
 import PromoPage from "./adminView/PromoPage";
 import AddPromoPage from "./adminView/AddPromoPage";
 import EditPromoPage from "./adminView/EditPromoPage";
+import PackagePage from "./adminView/PackagePage";
 
 function App() {
   return (
@@ -52,6 +50,7 @@ function App() {
         <Route path="/AdminPromo" element={<PromoPage/>}/>
         <Route path="/AdminTambahPromo" element={<AddPromoPage/>}/>
         <Route path="/AdminEditPromo" element={<EditPromoPage/>}/>
+        <Route path="/AdminPackage" element={<PackagePage/>}/>
       </Routes>
     </BrowserRouter>
   );

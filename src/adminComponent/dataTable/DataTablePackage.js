@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useQuery from "../../component/util/hooks/useQuery";
-import { getOffer } from "../../component/util/api/api";
+import { getPackage } from "../../component/util/api/api";
 
-export default function DataTableOffer() {
+export default function DataTablePackage() {
     const [data, setRowsPerPage] = useState(5); // Default number of rows per page
     const [currentPage, setCurrentPage] = useState(1);
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
@@ -89,7 +89,7 @@ export default function DataTableOffer() {
         return visiblePageNumbers;
       };
 
-      const { data: dataOffer, isLoading, isError } = useQuery(getOffer);
+      const { data: dataOffer, isLoading, isError } = useQuery(getPackage);
 
       if (isLoading) {
         return <div>Loading...</div>;
@@ -109,17 +109,23 @@ export default function DataTableOffer() {
         <thead>
           <tr className='text-white'>
             <th className="border px-4 py-2" onClick={() => requestSort('No')}>No{arrow('No')}</th>
-            <th className="border px-4 py-2" onClick={() => requestSort('Judul')}>Judul Offer{arrow('Judul')}</th>
-            <th className="border px-4 py-2" onClick={() => requestSort('Isi')}>Isi Offer{arrow('Isi')}</th>
+            <th className="border px-4 py-2" onClick={() => requestSort('Judul')}>Nama Paket{arrow('Judul')}</th>
+            <th className="border px-4 py-2" onClick={() => requestSort('Tanggal')}>tanggal{arrow('Tanggal')}</th>
+            <th className="border px-4 py-2" onClick={() => requestSort('Jam')}>Jam Keberangkatan{arrow('Jam')}</th>
+            <th className="border px-4 py-2" onClick={() => requestSort('Benefit')}>Benefit{arrow('Benefit')}</th>
+            <th className="border px-4 py-2" onClick={() => requestSort('Harga')}>Harga{arrow('Harga')}</th>
             <th className="border px-4 py-2" >Tindakan</th> {/* New column for actions */}
           </tr>
         </thead>
         <tbody>
         {sortedAndPaginatedData().map((data, index) => (
             <tr key={data.id} className={index % 2 === 0 ? 'bg-white' : 'bg-red-100'}>
-              <td className="border px-4 py-2">{data.No}</td>
-              <td className="border px-4 py-2">{data.judul_offer}</td>
-              <td className="border px-4 py-2">{data.isi_offer}</td>
+              <td className="border px-4 py-2">{data.id}</td>
+              <td className="border px-4 py-2">{data.nama_paket}</td>
+              <td className="border px-4 py-2">{data.tanggal}</td>
+              <td className="border px-4 py-2">{data.jam_keberangkatan}</td>
+              <td className="border px-4 py-2">{data.benefit}</td>
+              <td className="border px-4 py-2">{data.harga}</td>
               <td className="border px-4 py-2">
               <Link to='/AdminEditOffer'>
                 <button onClick={() => handleEdit(data.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">

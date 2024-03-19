@@ -43,7 +43,7 @@ export default function DataTablePromo() {
 
       const sortedAndPaginatedData = () => {
         const sorted = sortedData();
-        const startIndex = (currentPage - 1) * data;
+        const startIndex = (currentPage - 1) * data; //data from api
         const endIndex = startIndex + data;
         return sorted.slice(startIndex, endIndex);
       };
@@ -110,7 +110,6 @@ export default function DataTablePromo() {
           <tr className='text-white'>
             <th className="border px-4 py-2" onClick={() => requestSort('No')}>No{arrow('No')}</th>
             <th className="border px-4 py-2" onClick={() => requestSort('JudulPromo')}>Promo Offer{arrow('JudulPromo')}</th>
-            <th className="border px-4 py-2" onClick={() => requestSort('IsiPromo')}>Isi Offer{arrow('IsiPromo')}</th>
             <th className="border px-4 py-2" >Tindakan</th> {/* New column for actions */}
           </tr>
         </thead>
@@ -118,8 +117,7 @@ export default function DataTablePromo() {
         {sortedAndPaginatedData().map((data, index) => (
             <tr key={data.No} className={index % 2 === 0 ? 'bg-white' : 'bg-red-100'}>
               <td className="border px-4 py-2">{data.No}</td>
-              <td className="border px-4 py-2">{data.JudulPromo}</td>
-              <td className="border px-4 py-2">{data.IsiPromo}</td>
+              <td className="border px-4 py-2">{data.judul_promo}</td>
               <td className="border px-4 py-2">
               <Link to='/AdminEditPromo'>
                 <button onClick={() => handleEdit(data.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
