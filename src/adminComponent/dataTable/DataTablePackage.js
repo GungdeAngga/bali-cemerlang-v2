@@ -127,7 +127,7 @@ export default function DataTablePackage() {
               <td className="border px-4 py-2">{data.benefit}</td>
               <td className="border px-4 py-2">{data.harga}</td>
               <td className="border px-4 py-2">
-              <Link to='/AdminEditOffer'>
+              <Link to='/AdminEditPackage'>
                 <button onClick={() => handleEdit(data.id)} className="mr-2 bg-blue-500 text-white px-2 py-1 rounded">
                   Edit
                 </button>

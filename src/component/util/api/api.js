@@ -33,10 +33,10 @@ export const getPromo = () =>
     },
   }).then(({ data }) => data.data);
 
-export const createOffer = () =>
+export const addPackage = () =>
   axios({
     method: "post",
-    url: baseApi + "offer",
+    url: baseApi + "package",
     params:{
       order_direction: "desc",
     },
