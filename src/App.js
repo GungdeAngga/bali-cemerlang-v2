@@ -22,6 +22,8 @@ import PromoPage from "./adminView/PromoPage";
 import AddPromoPage from "./adminView/AddPromoPage";
 import EditPromoPage from "./adminView/EditPromoPage";
 import PackagePage from "./adminView/PackagePage";
+import AddPackage from "./adminView/AddPackage";
+import EditPackage from "./adminView/EditPackage";
 
 function App() {
   return (
@@ -50,7 +52,9 @@ function App() {
         <Route path="/AdminPromo" element={<PromoPage/>}/>
         <Route path="/AdminTambahPromo" element={<AddPromoPage/>}/>
         <Route path="/AdminEditPromo" element={<EditPromoPage/>}/>
-        <Route path="/AdminPackage" element={<PackagePage/>}/>
+        <Route path="/AdminPaket" element={<PackagePage/>}/>
+        <Route path="/AdminTambahPaket" element={<AddPackage/>}/>
+        <Route path="/AdminEditPaket" element={<EditPackage/>}/>
       </Routes>
     </BrowserRouter>
   );
