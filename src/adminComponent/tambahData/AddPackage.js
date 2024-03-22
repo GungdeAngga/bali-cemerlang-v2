@@ -52,7 +52,7 @@ export default function AddPackage() {
       </div>
      
       <div className='pt-10'>
-        <button onClick={handleSubmit} className='bg-VividRed text-white w-[1500px] flex items-center justify-center h-10 rounded-xl'>Tambah<img src='./adminAssets/arrow-right.svg' alt='simpan'></img></button>
+        <button className='bg-VividRed text-white w-[1500px] flex items-center justify-center h-10 rounded-xl'>Tambah<img src='./adminAssets/arrow-right.svg' alt='simpan'></img></button>
       </div>
     </div>
     </div>
